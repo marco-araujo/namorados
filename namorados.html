@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Você ❤️</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .message {
+            font-size: 24px;
+            max-width: 90%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="messages-container">
+        <p class="message">Olá Helena, amor da minha vida! ❤️</p>
+        <p class="message">Hoje é um dia especial, mas todos os dias ao teu lado são incríveis! 💖</p>
+        <p class="message">Tu és a razão do meu sorriso e da minha felicidade! 😊</p>
+        <p class="message">Amo-te mais do que as palavras podem expressar! 💕</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let messages = document.querySelectorAll(".message");
+            messages.forEach((msg, index) => {
+                setTimeout(() => {
+                    msg.style.opacity = 1;
+                }, index * 2000); // 2 segundos entre cada mensagem
+            });
+        });
+    </script>
+</body>
+</html>
